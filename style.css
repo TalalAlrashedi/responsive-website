@@ -1,0 +1,671 @@
+body {
+  padding: 0%;
+  margin: 0%;
+}
+
+.navbar-container {
+  background-color: #135cfa;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 10vh;
+  width: 100%;
+}
+
+.nav-logo {
+  width: 20%;
+  height: 80%;
+  display: flex;
+  justify-content: end;
+  align-items: center;
+}
+
+.navbar img {
+  height: 50%;
+  object-fit: cover;
+}
+
+.nav-links {
+  width: 50%;
+  /* background-color: red; */
+}
+
+.nav-links ul {
+  display: flex;
+  justify-content: space-around;
+  list-style: none;
+  font-size: 16px;
+}
+
+.nav-links a {
+  color: white;
+  text-decoration: none;
+}
+
+.nav-register {
+  width: 30%;
+  display: flex;
+  gap: 8%;
+  justify-content: end;
+  align-items: center;
+}
+
+.nav-register a {
+  border-radius: 5px;
+  transition: 0.3s;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  text-decoration: none;
+}
+
+.nav-register a:hover {
+  color: rgb(208, 203, 203);
+}
+
+.downlod-btn {
+  height: 3vh;
+  border: none;
+  background-color: #285ed2;
+  color: white;
+  cursor: pointer;
+}
+
+.banner {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  padding: 5%;
+}
+
+.banner h1 {
+  color: white;
+  font-size: 3rem;
+}
+
+.banner p {
+  text-align: center;
+  font-size: 1.2rem;
+  font-weight: 200;
+  color: white;
+}
+
+.section-container {
+  background-color: #f8f8fa;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  /* justify-content: center; */
+  align-items: center;
+}
+
+.section-header {
+  display: flex;
+  /* justify-content: center; */
+  /* align-items: center; */
+  background-color: #fefefe;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  /* margin-bottom: 2%; */
+}
+
+.section-header ul {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 3%;
+  width: 100%;
+  padding: 3%;
+  list-style: none;
+
+  a {
+    font-size: 1.2rem;
+    color: #888f9f;
+    text-decoration: none;
+  }
+
+  a:hover {
+    color: #135cfa;
+  }
+}
+
+.card-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 2%;
+  width: 90%;
+  background-color: #fafafb;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 2%;
+  width: 20vw;
+  height: 80vh;
+}
+
+.card-img {
+  width: 100%;
+  height: 70%;
+}
+.card-img img {
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+}
+
+.card-header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2%;
+  width: 100%;
+  /* height: 5%; */
+
+  h1 {
+    font-size: 1.2rem;
+    font-weight: 450;
+    color: #37434e;
+  }
+
+  button {
+    background-color: #135cfa;
+    border-radius: 25px;
+    cursor: none;
+    width: 15%;
+    height: 50%;
+    font-weight: 450;
+    font-size: 0.8rem;
+    color: white;
+    border: none;
+  }
+}
+
+.card-text p {
+  font-size: 0.8rem;
+  font-weight: 400;
+  color: #37434e;
+  text-align: center;
+}
+footer {
+  background-color: #d1d3d8;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: start;
+  gap: 2%;
+}
+
+.footer-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  padding: 3% 0%;
+}
+
+.footer-text {
+  /* display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 10px;
+  width: 50%; */
+  padding: 1%;
+
+  h1 {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #37434e;
+  }
+
+  p {
+    font-size: 1rem;
+    font-weight: 300;
+    color: #37434e;
+    line-height: 1rem;
+  }
+}
+
+.subscribe {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 50%;
+}
+
+.email {
+  display: flex;
+  /* justify-content: center; */
+  /* align-items: center; */
+  width: 80%;
+  border: #1a1e23 solid 1px;
+  border-radius: 10px;
+  height: 7vh;
+  background: rgba(255, 255, 255, 0.45);
+}
+
+.email input {
+  width: 70%;
+  border: none;
+  outline: none;
+  font-size: 1rem;
+  font-weight: 400;
+  color: #37434e;
+  background: rgba(255, 255, 255, 0.45);
+}
+
+.email input:focus {
+  box-shadow: 0px 0px 8px #1a5ef0;
+  transition: 0.3s;
+}
+
+.email button {
+  background-color: #135cfa;
+  cursor: pointer;
+  width: 30%;
+
+  font-size: 1.2rem;
+  color: white;
+  border: none;
+  margin: 1%;
+}
+
+.email button:hover {
+}
+
+.checkbox {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2%;
+  width: 80%;
+  height: 10%;
+  font-size: 0.8rem;
+  font-weight: 400;
+  color: #37434e;
+
+  input {
+    cursor: pointer;
+    width: 20px;
+    height: 20px;
+    background-color: white;
+  }
+}
+
+.checkbox label a {
+  color: #37434e;
+}
+
+.footer-links {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  gap: 2%;
+  padding: 3% 0% 3% 2%;
+}
+
+.links {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 5%;
+  width: 15vw;
+
+  h1 {
+    font-size: 1rem;
+    font-weight: 700;
+    color: #37434e;
+  }
+
+  a {
+    font-size: 0.7rem;
+    font-weight: 400;
+    color: #37434e;
+  }
+
+  a:hover {
+    color: #135cfa;
+  }
+}
+
+.footer-social {
+  display: flex;
+  justify-content: space-between;
+  gap: 2%;
+  width: 100%;
+}
+
+.social-links {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 2%;
+  width: 100%;
+  padding-left: 2%;
+
+  p {
+    font-size: 0.8rem;
+    font-weight: 400;
+    color: #37434e;
+    width: 50%;
+  }
+}
+
+.footer-social ul {
+  display: flex;
+  justify-content: end;
+  align-items: center;
+  padding-right: 2%;
+  gap: 5%;
+  width: 50%;
+}
+
+/* Small Mobile Devices (below 480px) */
+@media screen and (max-width: 479px) {
+  .banner h1 {
+    font-size: 1.5rem;
+  }
+
+  .card-img {
+    height: 60vw;
+  }
+
+  .card-header h1 {
+    font-size: 1rem;
+  }
+
+  .footer-text h1 {
+    font-size: 1.2rem;
+  }
+}
+/* Mobile Media Queries (below 768px) */
+@media screen and (max-width: 767px) {
+  /* Navbar mobile layout */
+  .navbar {
+    width: 100%;
+    flex-direction: column;
+  }
+
+  .nav-logo {
+    width: 100%;
+    justify-content: center;
+    margin-bottom: 10px;
+  }
+
+  .nav-links {
+    width: 100%;
+  }
+
+  .nav-links ul {
+    flex-direction: column;
+    align-items: center;
+    padding: 0;
+    gap: 15px;
+  }
+
+  .nav-register {
+    width: 100%;
+    justify-content: center;
+    margin-top: 15px;
+  }
+
+  /* Banner mobile adjustments */
+  .banner {
+    width: 100%;
+  }
+
+  .banner h1 {
+    font-size: 2rem;
+    text-align: center;
+  }
+
+  .banner p {
+    font-size: 0.9rem;
+  }
+
+  /* Section header mobile adjustments */
+  .section-header ul {
+    flex-direction: column;
+    gap: 15px;
+    /* padding: 20px 0; */
+  }
+
+  .section-header ul a {
+    font-size: 1rem;
+  }
+
+  /* Card mobile layout */
+  .card-container {
+    width: 90%;
+    flex-direction: column;
+    gap: 30px;
+  }
+
+  .card {
+    width: 90vw;
+    height: auto;
+    margin-bottom: 20px;
+  }
+
+  .card-img {
+    height: 50vw;
+  }
+
+  .card-header {
+    flex-direction: column;
+    gap: 10px;
+    padding: 10px 0;
+  }
+
+  .card-header button {
+    width: 80px;
+    height: 25px;
+  }
+
+  /* Footer mobile layout */
+  footer {
+    padding: 20px 0;
+  }
+
+  .footer-header {
+    flex-direction: column;
+    padding: 5% 3%;
+  }
+
+  .footer-text {
+    width: 100%;
+    text-align: center;
+    margin-bottom: 20px;
+  }
+
+  .subscribe {
+    width: 100%;
+  }
+
+  .email {
+    width: 90%;
+    flex-direction: column;
+    height: auto;
+    padding: 10px 0;
+  }
+
+  .email input {
+    width: 90%;
+    margin: 10px 0;
+    padding: 10px;
+  }
+
+  .email button {
+    width: 90%;
+    padding: 10px;
+    margin: 10px auto;
+  }
+
+  .checkbox {
+    width: 90%;
+    font-size: 0.7rem;
+  }
+
+  .footer-links {
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    width: 100%;
+    padding: 10px 0;
+  }
+
+  .links {
+    width: 90%;
+    text-align: center;
+    margin-bottom: 15px;
+  }
+
+  .links a {
+    margin: 5px 0;
+  }
+
+  .footer-social {
+    flex-direction: column;
+    padding: 0 5%;
+  }
+
+  .social-links {
+    flex-direction: column;
+    width: 100%;
+    text-align: center;
+  }
+
+  .social-links p {
+    width: 100%;
+    margin-bottom: 15px;
+  }
+
+  .footer-social ul {
+    width: 100%;
+    justify-content: center;
+    padding: 0;
+    margin-top: 15px;
+  }
+}
+/* Tablet Media Queries (768px - 1023px) */
+@media screen and (max-width: 1023px) and (min-width: 768px) {
+  /* Navbar adjustments */
+  .navbar {
+    height: 8vh;
+  }
+
+  .nav-logo {
+    width: 25%;
+  }
+
+  .nav-links {
+    width: 60%;
+  }
+
+  .nav-links ul {
+    font-size: 14px;
+    padding-left: 0;
+  }
+
+  .nav-register {
+    width: 15%;
+    gap: 5%;
+  }
+
+  /* Banner adjustments */
+  .banner h1 {
+    font-size: 2.5rem;
+  }
+
+  .banner p {
+    font-size: 1rem;
+  }
+
+  /* Card layout adjustments */
+  .card-container {
+    width: 95%;
+    gap: 1.5%;
+  }
+
+  .card {
+    width: 30vw;
+    height: 70vh;
+  }
+
+  .card-header h1 {
+    font-size: 1rem;
+  }
+
+  /* Footer adjustments */
+  .footer-text h1 {
+    font-size: 1.3rem;
+  }
+
+  .footer-text p {
+    font-size: 0.9rem;
+  }
+
+  .email {
+    height: 6vh;
+  }
+
+  .email input {
+    font-size: 0.9rem;
+  }
+
+  .email button {
+    font-size: 1rem;
+  }
+
+  .links {
+    width: 20vw;
+  }
+}
+
+/* Add a hamburger menu for mobile */
+@media screen and (max-width: 767px) {
+  /* Create a checkbox hack for the hamburger menu */
+  .nav-toggle {
+    display: block;
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    cursor: pointer;
+    font-size: 24px;
+    color: white;
+  }
+
+  #nav-toggle-checkbox {
+    display: none;
+  }
+
+  /* Hide nav links by default on mobile */
+  .nav-links {
+    display: none;
+    width: 100%;
+  }
+
+  /* Show nav links when checkbox is checked */
+  #nav-toggle-checkbox:checked ~ .nav-links {
+    display: block;
+  }
+
+  /* Add these elements to your HTML:
+       <input type="checkbox" id="nav-toggle-checkbox">
+       <label for="nav-toggle-checkbox" class="nav-toggle">☰</label>
+    */
+}
