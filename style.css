@@ -138,67 +138,48 @@ body {
 }
 
 .card-container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-wrap: wrap;
-  gap: 2%;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 2rem;
   width: 90%;
+
   background-color: #fafafb;
 }
 
 .card {
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: center;
-  gap: 2%;
-  width: 20vw;
-  height: 80vh;
+  gap: 1rem;
+  height: auto;
 }
 
 .card-img {
   width: 100%;
-  height: 70%;
+  height: 75%;
 }
-.card-img img {
+.card img {
   width: 100%;
-  height: 100%;
-  border-radius: 10px;
+  height: 50vh;
 }
 
 .card-header {
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 2%;
+  gap: 4%;
   width: 100%;
-  /* height: 5%; */
-
-  h1 {
-    font-size: 1.2rem;
-    font-weight: 450;
-    color: #37434e;
-  }
-
-  button {
-    background-color: #135cfa;
-    border-radius: 25px;
-    cursor: none;
-    width: 15%;
-    height: 50%;
-    font-weight: 450;
-    font-size: 0.8rem;
-    color: white;
-    border: none;
-  }
+  height: 5%;
 }
-
-.card-text p {
-  font-size: 0.8rem;
-  font-weight: 400;
-  color: #37434e;
-  text-align: center;
+.card-header button {
+  background-color: #135cfa;
+  border-radius: 20px;
+  cursor: none;
+  width: 15%;
+  height: 50%;
+  color: white;
+  border: none;
 }
 footer {
   background-color: #d1d3d8;
@@ -374,40 +355,57 @@ footer {
   width: 50%;
 }
 
-/* Small Mobile Devices (below 480px) */
 @media screen and (max-width: 479px) {
   .banner h1 {
     font-size: 1.5rem;
   }
 
-  .card-img {
-    height: 60vw;
+  .card img {
+    height: 30vh;
   }
 
   .card-header h1 {
-    font-size: 1rem;
+    font-size: 0.9rem;
   }
 
   .footer-text h1 {
     font-size: 1.2rem;
   }
+
+  .email input,
+  .email button {
+    width: 85%;
+  }
 }
-/* Mobile Media Queries (below 768px) */
+
 @media screen and (max-width: 767px) {
-  /* Navbar mobile layout */
-  .navbar {
+  .navbar-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     width: 100%;
+  }
+
+  .navbar {
+    height: auto;
     flex-direction: column;
+    padding: 15px 0;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
   }
 
   .nav-logo {
     width: 100%;
     justify-content: center;
-    margin-bottom: 10px;
+    margin-bottom: 15px;
+    text-align: center;
   }
 
   .nav-links {
     width: 100%;
+    display: flex;
+    justify-content: center;
   }
 
   .nav-links ul {
@@ -415,85 +413,137 @@ footer {
     align-items: center;
     padding: 0;
     gap: 15px;
+    width: 100%;
+    justify-content: center;
   }
 
   .nav-register {
     width: 100%;
     justify-content: center;
     margin-top: 15px;
+    gap: 10px;
   }
 
-  /* Banner mobile adjustments */
   .banner {
+    padding: 8% 3%;
+    align-items: center;
+    text-align: center;
     width: 100%;
   }
 
   .banner h1 {
     font-size: 2rem;
+    width: 100%;
     text-align: center;
   }
 
   .banner p {
     font-size: 0.9rem;
+    width: 90%;
+    text-align: center;
+    margin: 0 auto;
   }
 
-  /* Section header mobile adjustments */
+  .section-header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+  }
+
   .section-header ul {
     flex-direction: column;
     gap: 15px;
-    /* padding: 20px 0; */
+    padding: 20px 0;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    text-align: center;
   }
 
   .section-header ul a {
     font-size: 1rem;
+    text-align: center;
   }
 
-  /* Card mobile layout */
   .card-container {
+    grid-template-columns: 1fr;
     width: 90%;
-    flex-direction: column;
-    gap: 30px;
+    gap: 2rem;
+    padding: 1rem 0;
   }
 
   .card {
-    width: 90vw;
-    height: auto;
-    margin-bottom: 20px;
+    width: 100%;
+    gap: 1rem;
+    border: 1px solid black;
   }
 
-  .card-img {
-    height: 50vw;
+  .card img {
+    height: 40vh;
+    object-fit: cover;
   }
 
   .card-header {
     flex-direction: column;
     gap: 10px;
     padding: 10px 0;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    height: auto;
+  }
+
+  .card-header h1 {
+    margin: 5px 0;
+    text-align: center;
   }
 
   .card-header button {
     width: 80px;
-    height: 25px;
+    height: 30px;
+    font-size: 0.8rem;
+    margin: 5px 0;
   }
 
-  /* Footer mobile layout */
   footer {
     padding: 20px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
   }
 
   .footer-header {
     flex-direction: column;
     padding: 5% 3%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
 
   .footer-text {
     width: 100%;
     text-align: center;
     margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .footer-text h1,
+  .footer-text p {
+    text-align: center;
+    width: 90%;
   }
 
   .subscribe {
     width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
 
   .email {
@@ -501,12 +551,15 @@ footer {
     flex-direction: column;
     height: auto;
     padding: 10px 0;
+    justify-content: center;
+    align-items: center;
   }
 
   .email input {
     width: 90%;
     margin: 10px 0;
     padding: 10px;
+    text-align: center;
   }
 
   .email button {
@@ -518,6 +571,7 @@ footer {
   .checkbox {
     width: 90%;
     font-size: 0.7rem;
+    justify-content: center;
   }
 
   .footer-links {
@@ -526,12 +580,22 @@ footer {
     gap: 20px;
     width: 100%;
     padding: 10px 0;
+    justify-content: center;
   }
 
   .links {
     width: 90%;
     text-align: center;
     margin-bottom: 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .links h1,
+  .links a {
+    text-align: center;
   }
 
   .links a {
@@ -541,39 +605,68 @@ footer {
   .footer-social {
     flex-direction: column;
     padding: 0 5%;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
   }
 
   .social-links {
     flex-direction: column;
     width: 100%;
     text-align: center;
+    justify-content: center;
+    align-items: center;
   }
 
   .social-links p {
     width: 100%;
     margin-bottom: 15px;
+    text-align: center;
   }
 
   .footer-social ul {
     width: 100%;
     justify-content: center;
+    align-items: center;
     padding: 0;
     margin-top: 15px;
   }
 }
-/* Tablet Media Queries (768px - 1023px) */
-@media screen and (max-width: 1023px) and (min-width: 768px) {
-  /* Navbar adjustments */
-  .navbar {
-    height: 8vh;
+
+@media screen and (max-width: 767px) {
+  .nav-toggle {
+    display: block;
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    cursor: pointer;
+    font-size: 24px;
+    color: white;
+    z-index: 1000;
   }
 
-  .nav-logo {
-    width: 25%;
+  #nav-toggle-checkbox {
+    display: none;
   }
 
   .nav-links {
-    width: 60%;
+    display: none;
+    width: 100%;
+  }
+}
+@media screen and (max-width: 1023px) and (min-width: 768px) {
+  .navbar {
+    height: 8vh;
+    padding: 0 2%;
+  }
+
+  .nav-logo {
+    width: 20%;
+    justify-content: center;
+  }
+
+  .nav-links {
+    width: 50%;
   }
 
   .nav-links ul {
@@ -582,8 +675,9 @@ footer {
   }
 
   .nav-register {
-    width: 15%;
+    width: 30%;
     gap: 5%;
+    justify-content: flex-end;
   }
 
   /* Banner adjustments */
@@ -593,24 +687,30 @@ footer {
 
   .banner p {
     font-size: 1rem;
+    max-width: 80%;
+    margin: 0 auto;
   }
 
-  /* Card layout adjustments */
   .card-container {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
     width: 95%;
-    gap: 1.5%;
+    padding: 1rem 0;
   }
 
-  .card {
-    width: 30vw;
-    height: 70vh;
+  .card img {
+    height: 40vh;
   }
 
   .card-header h1 {
     font-size: 1rem;
   }
 
-  /* Footer adjustments */
+  .card-header button {
+    width: 70px;
+    font-size: 0.7rem;
+  }
+
   .footer-text h1 {
     font-size: 1.3rem;
   }
@@ -634,38 +734,4 @@ footer {
   .links {
     width: 20vw;
   }
-}
-
-/* Add a hamburger menu for mobile */
-@media screen and (max-width: 767px) {
-  /* Create a checkbox hack for the hamburger menu */
-  .nav-toggle {
-    display: block;
-    position: absolute;
-    top: 15px;
-    right: 15px;
-    cursor: pointer;
-    font-size: 24px;
-    color: white;
-  }
-
-  #nav-toggle-checkbox {
-    display: none;
-  }
-
-  /* Hide nav links by default on mobile */
-  .nav-links {
-    display: none;
-    width: 100%;
-  }
-
-  /* Show nav links when checkbox is checked */
-  #nav-toggle-checkbox:checked ~ .nav-links {
-    display: block;
-  }
-
-  /* Add these elements to your HTML:
-       <input type="checkbox" id="nav-toggle-checkbox">
-       <label for="nav-toggle-checkbox" class="nav-toggle">☰</label>
-    */
 }
