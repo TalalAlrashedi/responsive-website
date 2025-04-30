@@ -316,11 +316,16 @@ footer {
     font-weight: 700;
     color: #37434e;
   }
+  ul{
+    list-style: none;
+
+  }
 
   a {
     font-size: 0.7rem;
     font-weight: 400;
     color: #37434e;
+    text-decoration: none;
   }
 
   a:hover {
