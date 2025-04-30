@@ -203,11 +203,11 @@ footer {
 }
 
 .footer-text {
-  /* display: flex;
+  display: flex;
   flex-direction: column;
   justify-content: center;
   gap: 10px;
-  width: 50%; */
+  width: 50%;
   padding: 1%;
 
   h1 {
@@ -334,30 +334,8 @@ footer {
   width: 100%;
 }
 
-.social-links {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  gap: 2%;
-  width: 100%;
-  padding-left: 2%;
 
-  p {
-    font-size: 0.8rem;
-    font-weight: 400;
-    color: #37434e;
-    width: 50%;
-  }
-}
 
-.footer-social ul {
-  display: flex;
-  justify-content: end;
-  align-items: center;
-  padding-right: 2%;
-  gap: 5%;
-  width: 50%;
-}
 
 @media screen and (max-width: 479px) {
     
@@ -726,11 +704,12 @@ footer {
   }
 
   .email {
-    height: 6vh;
+    height: 1vh;
   }
 
   .email input {
     font-size: 0.9rem;
+    height: 2vh;
   }
 
   .email button {
